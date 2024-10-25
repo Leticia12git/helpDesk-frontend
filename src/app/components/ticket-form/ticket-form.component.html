@@ -1,0 +1,11 @@
+<div class="description">Preencha as informações</div>
+
+<form (ngSubmit)="onSubmit()" #ticketForm="ngForm">
+  <label for="subject">Titulo</label>
+  <input type="text" id="subject" name="subject" ngModel />
+
+  <label for="description">Descrição</label>
+  <textarea id="description" name="description" ngModel></textarea>
+
+  <button type="submit">Enviar Ticket</button>
+</form>

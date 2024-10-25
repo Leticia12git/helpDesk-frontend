@@ -1,0 +1,19 @@
+.description {
+  font-size: 50px;
+  font-family: cursive;
+  text-align: center;
+}
+
+form {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  width: 50%;
+  /* max-width: 400px; */
+  text-align: center;
+  font-size: px;
+}
+button {
+  cursor: pointer;
+  align-self: flex-start;
+}

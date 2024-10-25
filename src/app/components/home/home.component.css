@@ -1,0 +1,19 @@
+.title {
+  text-align: center;
+  font-size: 50px;
+  font-family: cursive;
+}
+.subtitle {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 100px;
+  font-family: cursive;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 5px;
+}
+button {
+  cursor: pointer;
+}
