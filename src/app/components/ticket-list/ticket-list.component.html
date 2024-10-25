@@ -2,10 +2,8 @@
   Lista de Chamados
 
   <div class="ticket-item" *ngFor="let ticket of tickets">
-    <div class="ticket-title">{{ ticket.title }}</div>
+    <div class="ticket-title">{{ ticket.subject }}</div>
     <div class="ticket-description">{{ ticket.description }}</div>
     <div class="ticket-status">Status: {{ ticket.status }}</div>
   </div>
-
-  <button><a routerLink="/novo-ticket">Abrir novo Chamado</a></button>
 </div>

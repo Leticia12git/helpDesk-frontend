@@ -1,4 +1,4 @@
-<div class="description">Preencha as informações</div>
+<!-- <div class="description">Preencha as informações</div>
 
 <form (ngSubmit)="onSubmit()" #ticketForm="ngForm">
   <label for="subject">Titulo</label>
@@ -8,4 +8,22 @@
   <textarea id="description" name="description" ngModel></textarea>
 
   <button type="submit">Enviar Ticket</button>
+</form> -->
+
+<form (ngSubmit)="onSubmit()" #ticketForm="ngForm">
+  <label for="subject">Título:</label>
+  <input id="subject" name="subject" [(ngModel)]="ticket.subject" required />
+
+  <label for="description">Descrição:</label>
+  <textarea
+    id="description"
+    name="description"
+    [(ngModel)]="ticket.description"
+    required
+  ></textarea>
+
+  <label for="status">Status:</label>
+  <input id="status" name="status" [(ngModel)]="ticket.status" required />
+
+  <button type="submit">Enviar</button>
 </form>

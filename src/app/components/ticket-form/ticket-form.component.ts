@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Ticket } from '../../models/ticket';
+import { TicketService } from '../../services/ticket.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ticket-form',
@@ -9,8 +12,33 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './ticket-form.component.css',
 })
 export class TicketFormComponent {
+  ticket: Ticket = {
+    subject: '',
+    description: '',
+    status: '',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  };
+
+  constructor(private ticketService: TicketService, private router: Router) {}
+
   onSubmit() {
-    console.log('Formulário enviado com sucesso!');
-    // Adicione a lógica necessária para lidar com o envio do formulário
+    this.ticketService.createTicket(this.ticket).subscribe({
+      next: (response) => {
+        console.log('Ticket cadastrado com sucesso!', response);
+        this.router.navigate(['/tickets']);
+        // Aqui, você pode limpar o formulário ou navegar para outra página
+        this.ticket = {
+          subject: '',
+          description: '',
+          status: '',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        };
+      },
+      error: (error) => {
+        console.error('Erro ao cadastrar ticket:', error);
+      },
+    });
   }
 }
