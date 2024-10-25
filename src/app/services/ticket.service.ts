@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Ticket } from './ticket.model';
+import { Ticket } from '../models/ticket';
 
 @Injectable({
   providedIn: 'root',
@@ -17,6 +17,10 @@ export class TicketService {
 
   getTicketById(id: number): Observable<Ticket> {
     return this.http.get<Ticket>(`${this.apiUrl}/${id}`);
+  }
+
+  getTickets(): Observable<Ticket[]> {
+    return this.http.get<Ticket[]>(this.apiUrl);
   }
 
   updateTicket(id: number, ticket: Ticket): Observable<Ticket> {

@@ -10,7 +10,10 @@ form {
   gap: 10px;
   width: 50%;
   /* max-width: 400px; */
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+
   font-size: px;
 }
 button {

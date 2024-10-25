@@ -1,0 +1,38 @@
+.title {
+  font-size: 50px;
+  font-family: cursive;
+  text-align: center;
+}
+button {
+  font-family: cursive;
+}
+.ticket-item {
+  background-color: #f9f9f9; /* Cor de fundo suave */
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 15px; /* Espaçamento interno */
+  margin: 10px 0; /* Margem entre os itens */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: transform 0.2s; /* Transição suave ao passar o mouse */
+}
+
+.ticket-item:hover {
+  transform: scale(1.02); /* Leve aumento ao passar o mouse */
+}
+
+.ticket-title {
+  font-size: 1.5rem; /* Tamanho da fonte do título */
+  color: #333; /* Cor do texto */
+  margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.ticket-description {
+  font-size: 1rem; /* Tamanho da fonte da descrição */
+  color: #666; /* Cor do texto da descrição */
+}
+
+.ticket-status {
+  font-size: 0.9rem; /* Tamanho da fonte do status */
+  color: #007bff; /* Cor do status (pode ser azul, por exemplo) */
+  font-weight: bold; /* Negrito para o status */
+}
